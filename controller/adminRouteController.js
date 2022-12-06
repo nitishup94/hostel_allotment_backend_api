@@ -25,7 +25,7 @@ const adminregister = async (req, res) => {
 //admin login function
 const adminlogin =async (req,res)=>{
     try {
-        const admindetails=await AdminReg.find({email:req.params.email})
+        const admindetails=await AdminReg.find({email:req.body.email,password:req.body.pass})
         if(admindetails.length!=0){
             res.status(200).json(admindetails)
         }else{

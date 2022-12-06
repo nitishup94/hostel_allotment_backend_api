@@ -4,10 +4,11 @@ const Studentdata = require('../model/StudentRegister');
 //student login controller
 const studentlogin =async (req,res)=>{
   try {
-      const studentdetails=await Studentdata.find({email:req.params.email})
+      const studentdetails=await Studentdata.find({email:req.body.email,password:req.body.pass})
       if(studentdetails.length!=0){
           res.status(200).json(studentdetails)
       }else{
+             console.log()
           res.status(404).json({'errmsg':'User not found!'})
       }
   }

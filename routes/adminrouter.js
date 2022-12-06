@@ -9,7 +9,7 @@ router.post('/admin',adminController.adminregister);
 
 
 //Admin Login routes
-router.get('/admin/login/:email',adminController.adminlogin);
+router.post('/admin/login',adminController.adminlogin);
 
 
 //update and fetch data routes

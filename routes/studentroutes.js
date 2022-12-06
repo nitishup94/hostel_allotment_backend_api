@@ -10,7 +10,7 @@ router.post('/admin/student',StudentController.studentregister);
 
 
 //student login routes 
-router.get('/student/login/:email',updateController.studentlogin);
+router.post('/student/login',updateController.studentlogin);
 
 
 //update and fetch data routes
